@@ -1,0 +1,12 @@
+-- english is e_{n,i}, french is f_{n,j}
+-- alignment is a_{n,i} --> j
+e_{n,i} ~ Mult(tt_{f_{n,a_{n,i}}})      , n \in [1,N] , i \in [1,I_{n}]
+f_{n,j} ~ Mult(vec(1.0,1,VF))             , n \in [1,N] , j \in [1,J_{n}]
+
+tt_{ff} ~ DirSym(0.1, VE) , ff \in [1,VF]
+a_{n,i} ~ Mult(vec(1.0,1,J_{n}))       , n \in [1,N] , i \in [1,I_{n}]
+
+--# --collapse tt
+--# --loadD english e VE N I ;
+--# --loadD french  f VF N J ;
+--# --dump last a tt

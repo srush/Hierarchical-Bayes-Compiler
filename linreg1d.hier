@@ -1,0 +1,19 @@
+w     ~ Nor(0.0, 10)
+b     ~ Nor(0.0, 10)
+si2   ~ IG(1,1)
+
+x_{n,d} ~ Nor(0.0, 10)               , n \in [1,N] , d \in [1,DX]
+y_{n,d} ~ Nor(w * x_{n,d} + b, si2)  , n \in [1,N] , d \in [1,DY]
+
+--# --loadM regX1d x N DX
+--# --loadM regY1d y N DY
+--# --dump best w b si2 ;
+
+--# --iter 5
+
+--# --define b 0.76227
+--# --define si2 0.05
+
+-- w = 0.18879
+-- b = 0.76227
+-- si2 = 0.05

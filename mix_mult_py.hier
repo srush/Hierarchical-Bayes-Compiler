@@ -1,0 +1,17 @@
+eta       ~ Gam(0.5,0.5)
+alpha     ~ Gam(0.5,0.5)
+theta_{k} ~ DirSym(eta, V)           , k \in [1,K+1]
+pi,K      ~ PY(alpha, 0.0)
+z_{d}     ~ Mult(pi)                 , d \in [1,D]
+w_{d,n}   ~ Mult(theta_{z_{d}})      , d \in [1,D] , n \in [1,N_{d}]
+
+--# --loadD testW w V D N ;
+
+-- this just means the initial value
+--# --define K 1
+
+--# --dump best pi z alpha theta ;
+
+--# --iter 100
+
+--# --collapse theta

@@ -1,0 +1,4 @@
+A_{k} ~ DirSym(1.0, K)      , k \in [1,K]
+B_{k} ~ DirSym(1.0, V)      , k \in [1,K]
+z_{n} ~ Mult(A_{z_{n-1}})   , n \in [1,N]
+w_{n} ~ Mult(B_{z_{n}}  )   , n \in [1,N]

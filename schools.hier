@@ -1,0 +1,8 @@
+y_{i,j} ~ Nor(theta_{j},tau), i \in [1,I] , j \in [1,J]
+theta_{j} ~ Nor(mutheta,tautheta), j \in [1,J]
+tau ~ IG(0.1,0.1)
+mutheta ~ Nor(0.0,1)
+tautheta ~ IG(1,1)
+
+-- y_{i,j} \in R, i \in [1,I], j \in [1,J]
+--# --loadM schools.data y I J

@@ -1,0 +1,13 @@
+alpha     ~ Gam(10,10)
+mu_{k}    ~ NorMV(vec(0.0,1,dim), 1, dim)     , k \in [1,K]
+si2       ~ IG(10,10)
+pi        ~ DirSym(alpha, K)
+z_{n}     ~ Mult(pi)                          , n \in [1,N]
+x_{n}     ~ NorMV(mu_{z_{n}}, si2, dim)       , n \in [1,N]
+
+x  \in R_{N,dim}
+mu \in R_{K,dim}
+
+
+--# --loadM X x N dim 
+--# --define K 2

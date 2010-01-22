@@ -1,0 +1,22 @@
+alpha     ~ Gam(0.5,0.5)
+mu_{k}    ~ NorMV(vec(0.0,1,dim), 1, dim)     , k \in [1,K+1]
+si2       ~ IG(10,10)
+pi,K      ~ PY(alpha, 0.0)
+z_{n}     ~ Mult(pi)                          , n \in [1,N]
+x_{n}     ~ NorMV(mu_{z_{n}}, si2, dim)       , n \in [1,N]
+
+x  \in R_{N,dim}
+mu \in R_{K+1,dim}
+
+
+--# --loadM X x N dim 
+
+-- this just means the initial value
+--# --define K 1
+--# --define si2 1
+
+--# --dump best pi z alpha mu ;
+
+--# --iter 100
+
+--# --collapse mu

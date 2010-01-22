@@ -1,0 +1,10 @@
+To compile, install ghc (haskell.org/ghc) and run:
+
+  ghc --make -fglasgow-exts -O2 Main.hs -o hbc
+
+This will create an executable called "hbc"
+
+
+More information at:
+
+  http://hal3.name/HBC
