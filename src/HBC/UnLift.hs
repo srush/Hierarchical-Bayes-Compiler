@@ -14,9 +14,9 @@
 --
 -----------------------------------------------------------------------------
 
-module UnLift where
+module HBC.UnLift where
 
-import Core
+import HBC.Core
 
 import Data.List
 import Data.Maybe

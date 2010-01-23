@@ -14,12 +14,12 @@
 --
 -----------------------------------------------------------------------------
 
-module GenC where
+module HBC.GenC where
 
-import qualified Core as C
-import Code
+import qualified HBC.Core as C
+import HBC.Code
 import qualified Data.Map as M
-import Type
+import HBC.Type
 import Data.Char
 import Control.Monad
 import Control.Monad.State
@@ -28,9 +28,9 @@ import Data.List
 import Data.Maybe
 import Data.Generics hiding ((:*:))
 import Data.Typeable
-import Util
-import qualified Simulate
-import qualified CodeOpt
+import HBC.Util
+import qualified HBC.Simulate as Simulate
+import qualified HBC.CodeOpt as CodeOpt
 import Debug.Trace 
 
 type TypeMap' = M.Map Id [Type]

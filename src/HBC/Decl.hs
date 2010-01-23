@@ -17,7 +17,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Decl where
+module HBC.Decl where
 
 import Data.Maybe
 import Data.Generics hiding ((:*:))

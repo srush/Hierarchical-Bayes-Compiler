@@ -13,9 +13,9 @@
 --
 -----------------------------------------------------------------------------
 
-module Math where
+module HBC.Math where
 
-import Core
+import HBC.Core
 import Data.Generics hiding ((:*:))
 import Data.Typeable
 

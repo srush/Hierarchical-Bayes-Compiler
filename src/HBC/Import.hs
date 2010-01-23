@@ -14,11 +14,11 @@
 --
 -----------------------------------------------------------------------------
 
-module Import where
+module HBC.Import where
 
-import Decl
-import Util
-import Parse
+import HBC.Decl
+import HBC.Util
+import HBC.Parse
 
 import Data.Maybe
 import Control.Monad

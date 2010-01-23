@@ -14,16 +14,16 @@
 --
 -----------------------------------------------------------------------------
 
-module Marginalize where
+module HBC.Marginalize where
 
-import Core
-import Type
+import HBC.Core
+import HBC.Type
 
 import Data.List
 import Data.Maybe
 import Control.Monad
 import qualified Data.Map as M
-import Util
+import HBC.Util
 
 data Update = Update { indexVariable :: Id
                      , isIncr        :: Bool -- if false, then it's an assn

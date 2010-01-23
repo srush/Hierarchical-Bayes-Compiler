@@ -14,7 +14,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Parse(parse,loadHier) where
+module HBC.Parse(parse,loadHier) where
 
 -- parseTest decl "a_{k} ~ Mult(5) , {- jdsk -} x \\in [  1,20] ; foo ~ Dir(x)"
 -- parseTest decl "a_{k} ~ Mult(case k of { 0 :> 5 ; 1 :> 6 }), k \\in [1,K]"
@@ -28,7 +28,7 @@ import Text.ParserCombinators.Parsec.Language
 import Text.ParserCombinators.Parsec.Token
 import System
 import System.IO
-import Decl
+import HBC.Decl
 import Control.Monad
 --import System.IO.Unsafe
 

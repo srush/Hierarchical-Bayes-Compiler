@@ -14,11 +14,11 @@
 --
 -----------------------------------------------------------------------------
 
-module Simulate where
+module HBC.Simulate where
 
-import Code
-import qualified Core as C
-import Type
+import HBC.Code
+import qualified HBC.Core as C
+import HBC.Type
 import qualified Data.Map as M
 import Data.Maybe
 import Data.List
@@ -26,10 +26,10 @@ import Debug.Trace
 import Control.Monad
 import Control.Monad.State
 import Data.Array.IO
-import Util
-import qualified Stats
+import HBC.Util
+import qualified HBC.Stats as Stats
 import qualified Data.Array.Base as DAB
-import Gen
+import HBC.Gen
 
 data SimType = II Int
              | RR Double 

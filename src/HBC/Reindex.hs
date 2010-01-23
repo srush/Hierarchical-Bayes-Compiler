@@ -17,10 +17,10 @@
 --
 -----------------------------------------------------------------------------
 
-module Reindex(reindex) where
+module HBC.Reindex(reindex) where
 
-import Decl
-import Util
+import HBC.Decl
+import HBC.Util
 import Data.Maybe
 import Debug.Trace
 import Data.List

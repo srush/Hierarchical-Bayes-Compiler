@@ -13,10 +13,10 @@
 --
 -----------------------------------------------------------------------------
 
-module Devectorize where
+module HBC.Devectorize where
 
-import Core
-import Type
+import HBC.Core
+import HBC.Type
 
 devecC = map devecF
 devecF f 

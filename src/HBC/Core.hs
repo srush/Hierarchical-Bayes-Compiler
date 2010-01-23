@@ -16,12 +16,12 @@
 --
 -----------------------------------------------------------------------------
 
-module Core where
+module HBC.Core where
 
 import Data.List
 import Data.Maybe
 import Control.Monad
-import Util
+import HBC.Util
 import Control.Monad.State
 import Data.Generics hiding ((:*:))
 import Data.Typeable

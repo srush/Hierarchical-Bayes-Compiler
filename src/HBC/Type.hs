@@ -14,13 +14,13 @@
 --
 -----------------------------------------------------------------------------
 
-module Type where -- (Type0(..),Type(..),TypeMap,getTypeMap,inferType,tInt,tReal) where
+module HBC.Type where -- (Type0(..),Type(..),TypeMap,getTypeMap,inferType,tInt,tReal) where
 
-import Core
+import HBC.Core
 import Data.List
 import qualified Data.Map as M
 import Control.Monad
-import Util
+import HBC.Util
 import Data.Generics hiding ((:*:))
 import Data.Typeable
 import Debug.Trace

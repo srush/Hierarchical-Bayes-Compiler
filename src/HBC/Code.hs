@@ -14,24 +14,24 @@
 --
 -----------------------------------------------------------------------------
 
-module Code where
+module HBC.Code where
 
-import Type
-import Core(Const(..))
-import qualified Core as C
+import HBC.Type
+import HBC.Core(Const(..))
+import qualified HBC.Core as C
 import qualified Data.Map as M
 import Data.Maybe
 import Data.Char
 import Data.List
 import Control.Monad
 import Control.Monad.State
-import Util
-import Marginalize
+import HBC.Util
+import HBC.Marginalize
 import Data.Generics hiding ((:*:))
 import Data.Typeable
 
-import qualified UnLift
-import qualified Math
+import qualified HBC.UnLift
+import qualified HBC.Math
 
 type Code = [Function]
 

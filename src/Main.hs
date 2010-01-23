@@ -25,26 +25,26 @@ import Data.IORef
 import qualified Data.Map as M
 import Control.Exception
 
-import Import
-import Code
-import Simulate
-import Decl hiding (decls)
-import Parse
-import Data
-import Core
-import MkCore
-import qualified Conjugacy
-import qualified UnLift
-import qualified Math
-import Marginalize
-import Type
-import Data
+import HBC.Import
+import HBC.Code
+import HBC.Simulate
+import HBC.Decl hiding (decls)
+import HBC.Parse
+import HBC.Data
+import HBC.Core
+import HBC.MkCore
+import qualified HBC.Conjugacy as Conjugacy
+import qualified HBC.UnLift as UnLift
+import qualified HBC.Math as Math
+import HBC.Marginalize
+import HBC.Type
+import HBC.Data
 import Control.Monad
 import Control.Monad.State
-import Util
-import qualified CodeOpt
+import HBC.Util
+import qualified HBC.CodeOpt as CodeOpt
 
-import qualified GenC(spec)
+import qualified HBC.GenC as GenC (spec) 
 
 data DumpSpec = DumpLast | DumpBest | DumpNth Int
 
@@ -278,7 +278,7 @@ buildCore dump coll maxm mod0 evals = do
   let typ'' = getTypeMap defType0 marg'
   when dump $ dumpInternal "typ''" [typ'']
 
-  let samp  = [f | d@(Core.V var _,_,_)  <- decls $ unliftCore marg'
+  let samp  = [f | d@(HBC.Core.V var _,_,_)  <- decls $ unliftCore marg'
                  , let f = makeSampleFunction d typ'' upd' (var `lookup` maxm)
                  , not (("post_" ++ drop 9 (name f)) `elem` margIds)
                  ]
@@ -437,8 +437,8 @@ regressionTest = do
     runMain' exc str0 = do
       let str = "simulate --iter 10 " ++ str0
       putStrLn ("Running: " ++ str)
-      res <- try (runMain $ words str) :: IO (Either (ExitCode) ())
-      res <- try $ return () :: IO (Either (ExitCode) ())
+      res <- try (runMain $ words str) :: IO (Either (Exception) ())
+      res <- try $ return () :: IO (Either (Exception) ())
       case res  of
         Left err -> putStrLn ("Exception: " ++ show err) >> pushExc exc str err
         Right _  -> return ()

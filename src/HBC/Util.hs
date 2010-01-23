@@ -1,4 +1,4 @@
-module Util where
+module HBC.Util where
 
 import Data.List
 import Control.Monad

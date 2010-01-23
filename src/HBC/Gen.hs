@@ -13,10 +13,10 @@
 --
 -----------------------------------------------------------------------------
 
-module Gen where
+module HBC.Gen where
 
 import Data.Char
-import Code
+import HBC.Code
 
 parens :: ShowS -> ShowS
 parens s = showChar '(' . s . showChar ')'

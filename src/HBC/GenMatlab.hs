@@ -13,13 +13,13 @@
 --
 -----------------------------------------------------------------------------
 
-module GenMatlab where
+module HBC.GenMatlab where
 
-import Code
-import qualified Core as C
-import Type
+import HBC.Code
+import qualified HBC.Core as C
+import HBC.Type
 import qualified Data.Map as M
-import Gen
+import HBC.Gen
 import Data.Maybe
 import Data.Char
 import Data.List

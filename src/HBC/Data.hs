@@ -13,16 +13,16 @@
 --
 -----------------------------------------------------------------------------
 
-module Data where
+module HBC.Data where
 
-import Simulate(SimType(..), showSimType)
+import HBC.Simulate(SimType(..), showSimType)
 import Data.Maybe
 import Data.List
 import Debug.Trace 
 import Control.Monad
 import Control.Monad.State
 import Data.Array.IO
-import Util
+import HBC.Util
 
 loadDiscrete :: [Char] -> FilePath -> IO (SimType, SimType, [SimType])
 loadDiscrete seps filepath = do

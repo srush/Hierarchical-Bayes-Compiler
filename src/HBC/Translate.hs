@@ -13,11 +13,11 @@
 --
 -----------------------------------------------------------------------------
 
-module Translate where
+module HBC.Translate where
 
-import Decl
-import Core
-import Util
+import HBC.Decl
+import HBC.Core
+import HBC.Util
 import Control.Monad
 
 translateExpr :: EXPR -> Expr

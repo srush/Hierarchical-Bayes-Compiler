@@ -12,10 +12,10 @@
 -- Perform index lifting on declarations
 --
 -----------------------------------------------------------------------------
-module Lift(lift) where
+module HBC.Lift(lift) where
 
-import Decl
-import Util
+import HBC.Decl
+import HBC.Util
 import Data.List
 
 -- | lift takes a module and lifts *all* variables.  note that it does

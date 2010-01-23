@@ -13,19 +13,19 @@
 --
 -----------------------------------------------------------------------------
 
-module MkCore where -- (mkCore, coreToPrior) where
+module HBC.MkCore where -- (mkCore, coreToPrior) where
 
-import Decl
-import Core
-import Util
-import Blanket
-import Reindex
-import Lift
-import Translate
+import HBC.Decl
+import HBC.Core
+import HBC.Util
+import HBC.Blanket
+import HBC.Reindex
+import HBC.Lift
+import HBC.Translate
 import Data.Maybe
 
-import qualified Math (simplify)
-import qualified UnLift (simplify)
+import qualified HBC.Math (simplify)
+import qualified HBC.UnLift (simplify) 
 
 -- mkCore assumes that imports have already been loaded, renamed and added
 -- to the module
@@ -119,7 +119,7 @@ addRange :: RANGE -> Dist -> Dist
 addRange r d = Prod (translateRange r) d ""
 
 
-simplifyAllCore Nothing = unliftCoreE . unliftCore . fixOffsets . Math.simplify . UnLift.simplify
+simplifyAllCore Nothing = unliftCoreE . unliftCore . fixOffsets . HBC.Math.simplify . HBC.UnLift.simplify
 simplifyAllCore (Just glob) = removeExtraSums glob . simplifyAllCore Nothing
 
 simplifyAllCoreE glob e = e'

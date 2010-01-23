@@ -1,24 +1,24 @@
-module TestLDA where
+module HBC.TestLDA where
 
-import Decl
-import Core
-import MkCore
-import qualified Conjugacy
-import qualified UnLift
-import qualified Math
-import Type
-import Code
-import Simulate
-import Data
+import HBC.Decl
+import HBC.Core
+import HBC.MkCore
+import qualified HBC.Conjugacy
+import qualified HBC.UnLift
+import qualified HBC.Math
+import HBC.Type
+import HBC.Code
+import HBC.Simulate
+import HBC.Data
 import Control.Monad
 import Control.Monad.State
-import Parse
+import HBC.Parse
 import System.IO.Unsafe
-import Util
-import GenC
+import HBC.Util
+import HBC.GenC
 import qualified Data.Map as M
-import Marginalize
-import CodeOpt
+import HBC.Marginalize
+import HBC.CodeOpt
 
 -- -------------------------------------------------------------------------------
 -- | Define the LDA model

@@ -12,10 +12,10 @@
 -- Find the Markov blanket for a given definition
 --
 -----------------------------------------------------------------------------
-module Blanket(blanket) where
+module HBC.Blanket(blanket) where
 
-import Decl
-import Util
+import HBC.Decl
+import HBC.Util
 import Data.List
 
 -- | blanket takes a module and an int specifying which declaration in

@@ -14,16 +14,16 @@
 --
 -----------------------------------------------------------------------------
 
-module Conjugacy where
+module HBC.Conjugacy where
 
-import Core
+import HBC.Core
 
 import Data.List
 import Data.Maybe
 import Control.Monad
-import Util
-import qualified UnLift
-import Math
+import HBC.Util
+import qualified HBC.UnLift as UnLift
+import HBC.Math
 
 -- to allow for user-defined conjugacy rules
 data Conjugate = Conjugate { prior :: Id

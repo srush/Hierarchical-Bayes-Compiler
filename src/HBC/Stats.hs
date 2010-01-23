@@ -14,7 +14,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Stats where
+module HBC.Stats where
 
 import System.Random
 import Control.Monad
