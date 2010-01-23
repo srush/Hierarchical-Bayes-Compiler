@@ -824,7 +824,7 @@ instance MArray a e m => MArray a e (StateT s m) where
   newArray_ = lift . newArray_
   unsafeRead i = lift . DAB.unsafeRead i
   unsafeWrite i a = lift . DAB.unsafeWrite i a
-  getNumElements a = DAB.getNumElements a
+  getNumElements  = lift . DAB.getNumElements 
 
 showSimType (RR i) = return (shows i)
 showSimType (II i) = return (shows i)
