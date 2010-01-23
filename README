@@ -1,9 +1,10 @@
 To compile, install ghc (haskell.org/ghc) and run:
 
-  ghc --make -fglasgow-exts -O2 Main.hs -o hbc
+  runghc Setup.lhs configure
+  runghc Setup.lhs build
+  sudo runghc Setup.lhs install
 
-This will create an executable called "hbc"
-
+This will create an executable called "hbc" (first in dist/build/hbc/hbc, and then globally)
 
 More information at:
 

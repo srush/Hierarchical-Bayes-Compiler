@@ -27,6 +27,10 @@ Extra-Source-Files: README
                     examples/regY1d
                     examples/schools.hier
                     examples/testW4
+                    clibs/stats.c
+                    clibs/stats.h
+                    clibs/samplib.c
+                    clibs/samplib.h
 
 License:            PublicDomain
 
@@ -35,7 +39,7 @@ Source-Repository head
     Location:     http://github.com/srush/Hierarchical-Bayes-Compiler.git
 
 executable hbc 
-        Build-Depends:     base >= 3 && < 5,
+        Build-Depends:     base >= 3 && < 4,
                            containers,
                            array,
                            parsec > 1 && < 3,   
