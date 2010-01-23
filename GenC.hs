@@ -1,3 +1,4 @@
+{-# LANGUAGE ScopedTypeVariables, PatternGuards #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  GenC
@@ -150,7 +151,7 @@ gen (src,args) compileCmd (dumpSpecN,dumpSpecVars) fname (vals,loadD,loadM,numi:
 
   let dumpSpecVars_unf = [(v',t) | v <- dumpSpecVars
                               , let v' = if ("post_" ++ v) `elem` M.keys tm then "post_" ++ v else v
-                              , t <- M.lookup v' tm `mplus` M.lookup v' etm]
+                              , t <- (maybe [] return $ M.lookup v' tm) `mplus` (maybe [] return $ M.lookup v' etm)]
 
   let varLengthParams = map (\s -> C.V (drop 11 s) []) $ nub $ listify ("ptr_return_" `isPrefixOf`) sampF'
   dumpSpecVars' <- flip filterM dumpSpecVars_unf $ \ (v,t) -> do

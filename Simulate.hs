@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, PatternGuards #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Simulate

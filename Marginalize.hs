@@ -1,3 +1,4 @@
+{-# LANGUAGE ScopedTypeVariables #-}
 ----------------------------------------------------------------------------
 -- |
 -- Module      :  Marginalize

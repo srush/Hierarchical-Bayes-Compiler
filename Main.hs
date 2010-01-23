@@ -405,6 +405,7 @@ compile' src includeDir qualFiles args suff run mod = do
               Dump (DumpNth i) vars -> (fromIntegral i, vars)
     evals = concatMap (\x -> case x of { Eval l -> l ; _ -> [] }) args
 
+runMain :: [String] -> IO () 
 runMain ("simulate":xs) = simulate    (parseArgs xs)
 runMain ("compile" :xs) = compile  xs (parseArgs xs)
 runMain _ = usage ""
@@ -436,9 +437,9 @@ regressionTest = do
     runMain' exc str0 = do
       let str = "simulate --iter 10 " ++ str0
       putStrLn ("Running: " ++ str)
-      res <- try (runMain $ words str)
-      res <- try $ return ()
-      case res of
+      res <- try (runMain $ words str) :: IO (Either (ExitCode) ())
+      res <- try $ return () :: IO (Either (ExitCode) ())
+      case res  of
         Left err -> putStrLn ("Exception: " ++ show err) >> pushExc exc str err
         Right _  -> return ()
       putStrLn ""

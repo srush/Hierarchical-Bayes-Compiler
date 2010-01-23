@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveDataTypeable, ScopedTypeVariables, PatternGuards #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Code

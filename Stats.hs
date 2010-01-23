@@ -1,3 +1,4 @@
+{-# LANGUAGE MultiParamTypeClasses, FunctionalDependencies, FlexibleInstances #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Stats
