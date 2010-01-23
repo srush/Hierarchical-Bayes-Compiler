@@ -48,7 +48,7 @@ executable hbc
                            haskell98            
         main-is:           Main.hs
 
-
+        ghc-options:       -O2
         hs-source-dirs:    src
 
         Other-Modules:     HBC.Blanket
