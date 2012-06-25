@@ -23,7 +23,7 @@ import Data.Maybe
 import Control.Monad
 import HBC.Util
 import Control.Monad.State
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 import Data.Char
 

@@ -39,13 +39,14 @@ Source-Repository head
     Location:     http://github.com/srush/Hierarchical-Bayes-Compiler.git
 
 executable hbc 
-        Build-Depends:     base >= 3 && < 4,
+        Build-Depends:     base >= 4 && < 5,
                            containers,
                            array,
                            parsec > 1 && < 3,   
                            mtl,            
                            random,
-                           haskell98            
+                           syb,
+                           process
         main-is:           Main.hs
 
         ghc-options:       -O2

@@ -24,7 +24,7 @@ import HBC.Util
 import Data.Maybe
 import Debug.Trace
 import Data.List
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Generics.Basics
 import Data.Generics.Schemes
 

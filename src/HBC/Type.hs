@@ -21,7 +21,7 @@ import Data.List
 import qualified Data.Map as M
 import Control.Monad
 import HBC.Util
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 import Debug.Trace
 import Data.Maybe

@@ -26,7 +26,7 @@ import Control.Monad.State
 import System.IO
 import Data.List
 import Data.Maybe
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 import HBC.Util
 import qualified HBC.Simulate as Simulate
