@@ -20,7 +20,7 @@
 module HBC.Decl where
 
 import Data.Maybe
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 import Data.Generics.Basics
 import Data.Generics.Schemes

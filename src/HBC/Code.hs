@@ -27,7 +27,7 @@ import Control.Monad
 import Control.Monad.State
 import HBC.Util
 import HBC.Marginalize
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 
 import qualified HBC.UnLift

@@ -15,8 +15,11 @@
 
 module Main where
 
-import System
+--import System
+import System.Exit
+import System.Environment
 import System.IO
+import System.Cmd
 import Data.Char
 import Data.List
 import Data.Maybe
@@ -437,8 +440,8 @@ regressionTest = do
     runMain' exc str0 = do
       let str = "simulate --iter 10 " ++ str0
       putStrLn ("Running: " ++ str)
-      res <- try (runMain $ words str) :: IO (Either (Exception) ())
-      res <- try $ return () :: IO (Either (Exception) ())
+      res <- try (runMain $ words str) :: IO (Either SomeException ())
+      res <- try $ return () :: IO (Either SomeException ())
       case res  of
         Left err -> putStrLn ("Exception: " ++ show err) >> pushExc exc str err
         Right _  -> return ()

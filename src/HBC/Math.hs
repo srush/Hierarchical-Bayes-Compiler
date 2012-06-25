@@ -16,7 +16,7 @@
 module HBC.Math where
 
 import HBC.Core
-import Data.Generics hiding ((:*:))
+import Data.Generics -- hiding ((:*:))
 import Data.Typeable
 
 
